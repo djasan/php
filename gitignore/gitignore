@@ -1,0 +1,30 @@
+# Créé par https://www.toptal.com/developers/gitignore/api/windows
+# Modifier sur https://www.toptal.com/developers/gitignore?templates=windows
+
+### Les fenêtres ###
+# Fichiers de cache de vignettes Windows
+Thumbs.db
+Thumbs.db : chiffrable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Fichier de vidage
+*.stackdump
+
+# Fichier de configuration du dossier
+[Jj]esktop.ini
+
+# Corbeille utilisée sur les partages de fichiers
+$RECYCLE.BIN/
+
+# fichiers du programme d'installation Windows
+*.taxi
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Raccourcis Windows
+*.lnk
+
+# Fin de https://www.toptal.com/developers/gitignore/api/windows
