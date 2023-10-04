@@ -1,58 +1,23 @@
+
+
 <?php
-/* phpinfo(); */
-// include './header.php';
-// include_once './header.php';
+// phpinfo()
 require './fonction.php';
-$titre ="Operateurs.php";
 
-/* $x=4;
-$y=2;
-$z=5; */
-/* + - /  *  ** % */
+$titre = "Operateur php";
 
-/* $calcul=($x+$y);
-dd($calcul); */
-/* $calcul=($x*$y);
-dd($calcul); */
-/* $calcul=($x/$y);
-dd($calcul); */
-/* $calcul=($x**$y);
-dd($calcul); */
-/* $calcul=($x%$y);
-dd($calcul); */
+$tab1 = [];
+$notes = [12, 14, 6, 10];
 
-/* $calcul=($x+$y)*$z;
-dd($calcul); */
-/* $calcul=($x+$y*$z);
-dd($calcul); */
+$tab1[] = 'Janvier';
+$tab1[] = 45;
+$tab1[] = true;
 
-/* $calcul=($x+=5);
-dd($calcul);
- */
-/* $calcul=($x-=5);
-dd($calcul); */
-/* $calcul=($x%=5);
-dd($calcul); */
+array_push($tab1, 'Voiture', 10.5, [45, true, 'Truc']);
+
+$tabFusion = array_merge($tab1, $notes);
+
+dd($tabFusion[5][2]);
 
 
-/* $anneeDeNaissance =1970;
-
-$age=date("2023")-
-$anneeDeNaissance;
-
-
-dd($age); */
-
-/* calcul prix ttc */
-/* $prixHT=34;
-
-$tva=10;
-$prixTTC=$prixHT +($tva*$prixHT)/100;
-dd($prixTTC); */
-
-
-
-
-require "./index.view.php";
-
-?>
+require './index.view.php';
