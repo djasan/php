@@ -80,3 +80,17 @@ dbug($titre);
 
 require './footer.php'; */
 // echo $titre;
+
+
+define("USER","John Doe");
+define("NOTES",[12,13,14]);
+define("ONLINE", true);
+define("AGE", 37);
+dd(AGE);
+/* 
+dd(USER) ; */
+
+
+
+
+?>
