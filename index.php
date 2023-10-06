@@ -70,20 +70,30 @@ $planetes2 =[
 krsort($planetes);
  */
 /* asort($planetes); */
-arsort($planetes);
- dd($planetes);
+/* arsort($planetes); */
+/* krsort($planetes);
+
+ dd($planetes); */
 /* 
 sort
 asort
-arsot
+arsort
 rsort 
-ksort*/
+ksort
+krsort*/
+$tab =[];
+
+$tab[] =[  "A","B" ,"C" ];
+
+$tab[] =["Q", "R","T"];
+$tab[] =["E", "U","P","I"];
+
+$tab[ ]= 
 
 
+dd($tab[0][2].$tab[2][0].$tab[2][2].$tab[2][2].$tab[2][3].$tab[0][2]);
 
-
-
-
+/*Ecrire le mot ceppic avec les lettres du tableau $tab  */
 
 
 /* require './index.view.php'; */
