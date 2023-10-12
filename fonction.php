@@ -1,16 +1,28 @@
 
 <?php
 
-function dbug($value)
+
+$x = 5;
+$y = 3;
+function calcul($x)
+
 {
-    echo '<pre style="background-color:black;color:white;overflow: auto;padding: 10px;">';
-    print_r($value);
-    // var_dump($value);
-    echo '</pre>';
+
+    global $y;
+    $y = 7;
+    return $x + $y;
 }
 
-function dd($value)
-{
-    dbug($value);
-    die('Script php arrété !!!');
-}
+
+echo calcul(5);
+dd($y);
+
+
+
+
+?>
+
+
+
+
+

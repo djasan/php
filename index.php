@@ -1,7 +1,7 @@
 <?php
 /* require "./fonction.php"; */
 
-$titre = "structure de contrôle bis";
+/* $titre = "structure de contrôle bis"; */
 
 
 /* $age = 20;
@@ -23,7 +23,7 @@ endif;
  */
 
 
-
+/* 
  $a = 20;
  $b = "5";
  
@@ -32,8 +32,14 @@ endif;
  endif;
  ?>
  
+ */
 
 
 
 
-<!--  require './index.view.php';  -->
+
+
+
+
+/* <!--  require './index.view.php';  --> */
+
