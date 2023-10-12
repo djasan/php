@@ -1,10 +1,10 @@
 <?php
 require './fonction.php';
-
+// dbug($_POST)
 // dbug($_GET);
 // dbug($_SERVER);
 // if(isset($_POST["submitted"])):
-// dbug($_POST)
+
 dbug($_REQUEST);
 if($_SERVER["REQUEST_METHOD"] ==="POST"):
 echo "Votre nom est : ", $_POST['nom'], '<br>';
