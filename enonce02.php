@@ -3,7 +3,7 @@
 $persons = json_decode($personsJson,true); */
 
 $persons = json_decode(file_get_contents('./data/persons.json'),true);
-// print_r($persons);
+//  print_r($persons);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
