@@ -15,7 +15,7 @@
 
 <?php
 // Lire le contenu du fichier JSON
-$json_data = file_get_contents('data/persons.json');
+$json_data = file_get_contents('data/user.json');
 
 if ($json_data !== false) {
     // Décoder les données JSON
