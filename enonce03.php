@@ -15,21 +15,27 @@
 
 <?php
 // Lire le contenu du fichier JSON
-$json_data = file_get_contents('data/colors.json');
-$data = json_decode($json_data, true);
+$json_data = file_get_contents('data/persons.json');
 
-// Vérifier si la lecture du fichier JSON a réussi
-if ($data === null) {
-    echo "Erreur lors de la lecture du fichier JSON.";
-} else {
-    // Parcourir le tableau associatif obtenu à partir du JSON avec une boucle foreach
-    echo "<ul>";
-    foreach ($data as $key => $value) {
-        echo "<li>$key : $value</li>";
+if ($json_data !== false) {
+    // Décoder les données JSON
+    $data = json_decode($json_data, true);
+
+    // Vérifier si les données ont été correctement décodées
+    if ($data !== null) {
+        // Parcourir les données JSON et afficher les clés et les valeurs
+        foreach ($data as $key => $value) {
+            echo "$key : $value<br>";
+        }
+    } else {
+        echo "Erreur lors du décodage des données JSON.";
     }
-    echo "</ul>";
+} else {
+    echo "Erreur lors de la récupération des données depuis le fichier.";
 }
 ?>
+
+
 
 
 </body>

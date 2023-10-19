@@ -1,33 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h1>bonjour
+    <?php ?>
+    </h1>
 
-
-
-
-
-
-
-<?php
-require './fonction.php';
-// dd($_SERVER);
-// dd($_SERVER["REQUEST_URI"] );
-
-$url = 'http://http://localhost/php/contact.php';
-
-dd(parse_url ($_SERVER["REQUEST_URI"]))["path"];
-if($url==="php");
-
-
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
