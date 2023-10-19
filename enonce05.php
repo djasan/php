@@ -6,7 +6,7 @@
     <title>Liste des utilisateurs</title>
 </head>
 <body>
-<body>
+
     <h1>Liste des utilisateurs</h1>
     <?php
     // Récupérer les données JSON de l'URL
@@ -47,7 +47,6 @@
         }
     }
     ?>
-</body>
-</html>
+
 </body>
 </html>

@@ -1,38 +1,57 @@
+<?php
+/* $personsJson = file_get_contents('./data/persons.json');
+$persons = json_decode($personsJson,true); */
+
+$persons = json_decode(file_get_contents('./data/persons.json'),true);
+// print_r($persons);
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informations sur les personnes</title>
+    <title>Persons</title>
 </head>
 <body>
+    <h3><?=$persons[2]['friends'][1]['name']?></h3>
+    <p>
+        La couleur des yeux de Ball Shaffer est : 
+        <strong>
+            <?=$persons[1]['eyeColor']?>
+        </strong>.
+    </p>
+        <?php 
+        foreach ($persons as $key => $val) 
+        {
+        ?>
+        <article>
+            <img src="<?=$val['picture']?>" alt="<?=$val['name']?>">
+            <p>Nom: <?=$val['name']?></p>
+            <p>Age: <?=$val['age']?></p>
+            <p>Couleur des yeux : <?=$val['eyeColor']?></p>
+            <p>Email: email de la personne : <?=$val['email']?></p>
+            <p>Fruit favori : <?=$val['favoriteFruit']?></p>
 
-<h1>Informations sur les personnes</h1>
+            <p><?=$val['isActive'] ? 'ACTIF' : '' ?></p>
+            <?=$val['isActive'] ? '<p>ACTIF</p>' : '' ?>
 
-<?php
-// Lire le contenu du fichier JSON
-$json_data = file_get_contents('data/persons.json');
-
-if ($json_data !== false) {
-    // Décoder les données JSON
-    $data = json_decode($json_data, true);
-
-    // Vérifier si les données ont été correctement décodées
-    if ($data !== null) {
-        // Parcourir les personnes et afficher les informations
-        foreach ($data['personnes'] as $personne) {
-            echo "<p>Nom : " . $personne['nom'] . "</p>";
-            echo "<p>Âge : " . $personne['age'] . "</p>";
-            echo "<p>Email : " . $personne['email'] . "</p>";
-            echo "<hr>";
-        }
-    } else {
-        echo "Erreur lors du décodage des données JSON.";
-    }
-} else {
-    echo "Erreur lors de la récupération des données depuis le fichier.";
-}
-?>
+            <p>
+                <?php
+                if ($val['isActive'])
+                {
+                    echo "<p>ACTIF</p>";
+                } 
+                ?>          
+            </p>
+            <p>
+                Tags:
+                <?=implode(",",$val['tags']) ?>
+            </p>
+            <hr> 
+        </article>
+        <?php 
+        } 
+        ?>
 
 </body>
 </html>

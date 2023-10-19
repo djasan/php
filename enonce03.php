@@ -7,37 +7,18 @@
 </head>
 
 <body>
-    
-
-
-
-
 
 <?php
-// Lire le contenu du fichier JSON
-$json_data = file_get_contents('data/user.json');
 
-if ($json_data !== false) {
-    // Décoder les données JSON
-    $data = json_decode($json_data, true);
+$colors = json_decode(file_get_contents('./data/colors.json'),true);
 
-    // Vérifier si les données ont été correctement décodées
-    if ($data !== null) {
-        // Parcourir les données JSON et afficher les clés et les valeurs
-        foreach ($data as $key => $value) {
-            echo "$key : $value<br>";
-        }
-    } else {
-        echo "Erreur lors du décodage des données JSON.";
-    }
-} else {
-    echo "Erreur lors de la récupération des données depuis le fichier.";
-}
+//print_r($colors);
+
+foreach ($colors as $key => $val)
+{
+    echo '<div style="display:flex;justify-content:center;align-items:center;color:white;width:100px;height:100px;background-color:' . $val['value'] . '">' . $val['color'] . '</div>'; 
+} 
 ?>
-
-
-
-
 </body>
 </html>
 
