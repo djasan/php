@@ -1,3 +1,5 @@
 https://www.apachefriends.org/fr/download.html
 
 https://www.php.net/manual/fr/
+
+Make sure that the extension files do exist in the folder which the extension_dir points to and that the corresponding lines in your php.ini are not commented out (you can use phpinfo() to check current setup):
